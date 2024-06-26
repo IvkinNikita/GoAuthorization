@@ -11,3 +11,9 @@ require (
     gopkg.in/yaml.v3 v3.0.1 // indirect
     olympos.io/encoding/edn v0.0.0-20201019073823-d3554ca0b0a3 // indirect
 )
+<<<<<<< HEAD
+=======
+
+//replace github.com/IvkinNikita/GoAuthorization/sso/internal/config => ./sso/internal/config
+
+>>>>>>> 2663876857c67d634f3fa4244f68f7a2696848a6
