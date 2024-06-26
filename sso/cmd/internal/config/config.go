@@ -13,5 +13,33 @@ type GRPCConfig struct {
 }
 
 func MustLoad() *Config {
-	
+	path := fetchConfigPath()
+	if path == "" {
+		panic(v:"config path is empty")
+	}
+
+	if _, err: os.Stat(path); os.IsNotExist(err){
+		panic("config file does not exist: " + path)
+	}
+
+	var cfg Config
+
+	if err := cleanev.ReadConfig(path, &cfg); err != nil {
+		panic("failed to read config: " + err.Error())
+	}
+
+	return &cfg
 }
+
+ func fetchConfigPath() string {
+	var res string
+
+	flag.String(&res, name:"config", value:"", usage:"path to config file")
+	flag.Parse()
+
+	if res == ""{
+		res = os.Getenv(key:"CONFIG_PATH")
+	}
+
+	return res
+ }

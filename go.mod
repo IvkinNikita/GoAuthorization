@@ -3,6 +3,7 @@ module sso
 go 1.21
 
 require (
+	github.com/IvkinNikita/GoAuthorization
 	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/ilyakaznacheev/cleanenv v1.5.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
