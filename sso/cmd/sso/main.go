@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sso/internal/config"
+
+	"github.com/IvkinNikita/GoAuthorization/sso/internal/config"
 )
 
 func main() {
