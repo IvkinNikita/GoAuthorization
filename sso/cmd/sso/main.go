@@ -26,7 +26,7 @@ func main() {
 		slog.Any("env", cfg),
 		slog.Int("port", cfg.GRPC.Port))
 	log.Debug("debug message")
-	log.Error("error mesage")
+	log.Error("error message")
 	log.Warn("warn message")
 	// TODO: initilization apppp (app)
 
@@ -51,5 +51,4 @@ func setupLogger(env string) *slog.Logger {
 		)
 	}
 	return log
-
 }
